@@ -1,0 +1,15 @@
+current directory: /var/www/RealWorld/vendor/bundle/ruby/3.1.0/gems/bootsnap-1.16.0/ext/bootsnap
+/home/ec2-user/.rbenv/versions/3.1.4/bin/ruby -I /home/ec2-user/.rbenv/versions/3.1.4/lib/ruby/3.1.0 extconf.rb
+creating Makefile
+
+current directory: /var/www/RealWorld/vendor/bundle/ruby/3.1.0/gems/bootsnap-1.16.0/ext/bootsnap
+make DESTDIR\= sitearchdir\=./.gem.20230703-52776-60og0i sitelibdir\=./.gem.20230703-52776-60og0i clean
+
+current directory: /var/www/RealWorld/vendor/bundle/ruby/3.1.0/gems/bootsnap-1.16.0/ext/bootsnap
+make DESTDIR\= sitearchdir\=./.gem.20230703-52776-60og0i sitelibdir\=./.gem.20230703-52776-60og0i
+compiling bootsnap.c
+linking shared-object bootsnap/bootsnap.so
+
+current directory: /var/www/RealWorld/vendor/bundle/ruby/3.1.0/gems/bootsnap-1.16.0/ext/bootsnap
+make DESTDIR\= sitearchdir\=./.gem.20230703-52776-60og0i sitelibdir\=./.gem.20230703-52776-60og0i install
+/usr/bin/install -c -m 0755 bootsnap.so ./.gem.20230703-52776-60og0i/bootsnap
