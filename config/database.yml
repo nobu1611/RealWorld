@@ -5,9 +5,8 @@
 #   gem "sqlite3"
 #
 default: &default
-  adapter: sqlite3
-  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  timeout: 5000
+  adapter: mysql2
+  encoding: utf8mb4
 
 development:
   <<: *default
@@ -21,5 +20,13 @@ test:
   database: db/test.sqlite3
 
 production:
-  <<: *default
-  database: db/production.sqlite3
+  database: test_app_production
+  adapter: mysql2
+  encoding: utf8mb4
+  charset: utf8mb4
+  collation: utf8mb4_general_ci
+  username: root1
+  password: password1
+  host: rw-web.c1tc2gjrmzoz.ap-northeast-1.rds.amazonaws.com
+  pool: 20
+  timeout: 1000
