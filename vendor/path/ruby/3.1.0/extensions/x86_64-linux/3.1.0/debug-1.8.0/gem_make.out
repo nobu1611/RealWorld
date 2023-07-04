@@ -1,0 +1,16 @@
+current directory: /var/www/RealWorld/vendor/path/ruby/3.1.0/gems/debug-1.8.0/ext/debug
+/home/ec2-user/.rbenv/versions/3.1.4/bin/ruby -I /home/ec2-user/.rbenv/versions/3.1.4/lib/ruby/3.1.0 extconf.rb
+creating Makefile
+
+current directory: /var/www/RealWorld/vendor/path/ruby/3.1.0/gems/debug-1.8.0/ext/debug
+make DESTDIR\= sitearchdir\=./.gem.20230703-56942-4fgaq sitelibdir\=./.gem.20230703-56942-4fgaq clean
+
+current directory: /var/www/RealWorld/vendor/path/ruby/3.1.0/gems/debug-1.8.0/ext/debug
+make DESTDIR\= sitearchdir\=./.gem.20230703-56942-4fgaq sitelibdir\=./.gem.20230703-56942-4fgaq
+compiling debug.c
+compiling iseq_collector.c
+linking shared-object debug/debug.so
+
+current directory: /var/www/RealWorld/vendor/path/ruby/3.1.0/gems/debug-1.8.0/ext/debug
+make DESTDIR\= sitearchdir\=./.gem.20230703-56942-4fgaq sitelibdir\=./.gem.20230703-56942-4fgaq install
+/usr/bin/install -c -m 0755 debug.so ./.gem.20230703-56942-4fgaq/debug

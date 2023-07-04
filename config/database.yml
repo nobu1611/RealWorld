@@ -3,30 +3,11 @@
 #
 #   Ensure the SQLite 3 gem is defined in your Gemfile
 #   gem "sqlite3"
-#
+
 default: &default
   adapter: mysql2
   encoding: utf8mb4
-
-development:
-  <<: *default
-  database: db/development.sqlite3
-
-# Warning: The database defined as "test" will be erased and
-# re-generated from your development database when you run "rake".
-# Do not set this db to the same as development or production.
-test:
-  <<: *default
-  database: db/test.sqlite3
-
-production:
-  database: test_app_production
-  adapter: mysql2
-  encoding: utf8mb4
-  charset: utf8mb4
-  collation: utf8mb4_general_ci
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   username: root1
-  password: password1
-  host: rw-web.c1tc2gjrmzoz.ap-northeast-1.rds.amazonaws.com
-  pool: 20
-  timeout: 1000
+  password: password1 #設定したパスワードを入力
+  host: rw-web.c1tc2gjrmzoz.ap-northeast-1.rds.amazonaws.com #RDSのエンドポイント
