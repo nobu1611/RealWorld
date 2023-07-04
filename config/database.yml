@@ -1,13 +1,25 @@
-# SQLite. Versions 3.8.0 and up are supported.
-#   gem install sqlite3
-#
-#   Ensure the SQLite 3 gem is defined in your Gemfile
-#   gem "sqlite3"
-
 default: &default
   adapter: mysql2
   encoding: utf8mb4
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  username: root1
-  password: password1 #設定したパスワードを入力
-  host: rw-web.c1tc2gjrmzoz.ap-northeast-1.rds.amazonaws.com #RDSのエンドポイント
+  username: root
+
+development:
+  <<: *default
+  database: real_world_development
+
+test:
+  <<: *default
+  database: real_world_test
+
+production:
+  database: real-world-production
+  adapter: mysql2
+  encoding: utf8mb4
+  charset: utf8mb4
+  collation: utf8mb4_general_ci
+  username: <%= Rails.application.credentials.db[:user_name] %>
+  password: <%= Rails.application.credentials.db[:password] %>
+  host: <%= Rails.application.credentials.db[:endpoint] %>
+  pool: 20
+  timeout: 1000
