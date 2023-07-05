@@ -20,3 +20,4 @@ RealWorld　の API のうち、次のエンドポイントを実装<br>
 
 RealWorld の API の仕様を部分的に満たした API を作成します。具体的には、認証機能のない簡易バージョンの作成になります。
 
+<a href="https://aws-infra-practices.tokyo">RealWorldデプロイ</a>
